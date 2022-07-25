@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -e
 
-echo "[i] Ask for sudo password"
+echo "0;32[i] Ask for sudo password"
 sudo -v
 
 case "$(uname -s)" in
@@ -13,7 +13,7 @@ case "$(uname -s)" in
                 case "$ID" in
                     debian | ubuntu | pop)
                         if [[ ! -x /usr/bin/ansible ]]; then
-                            echo "[i] Install Ansible"
+                            echo "0;32[i] Install Ansible"
                             sudo apt-get install -y ansible python3-apt
                         fi
                         ;;
