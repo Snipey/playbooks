@@ -41,7 +41,10 @@ case "$(uname -s)" in
         exit 1
         ;;
 esac
+git clone https://github.com/Snipey/Playbooks.git ~/playbooks
+cd ~/playbooks
 
+#! clone the playbook repository
 # Run main playbook
 echo "[i] Run Playbook"
 ansible-playbook --ask-become-pass -i hosts linux.yml --check
