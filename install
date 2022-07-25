@@ -14,7 +14,7 @@ case "$(uname -s)" in
                     debian | ubuntu | pop)
                         if [[ ! -x /usr/bin/ansible ]]; then
                             echo "[i] Install Ansible"
-                            sudo apt-get install -y ansible python3 python3-pip
+                            sudo apt-get install -y ansible
                         fi
                         ;;
 
@@ -47,6 +47,6 @@ cd ~/playbooks
 #! clone the playbook repository
 # Run main playbook
 echo "[i] Run Playbook"
-ansible-playbook --ask-become-pass -i hosts linux.yml --check
+ansible-playbook --ask-become-pass -i hosts linux.yml
 
 echo "[i] Done."
