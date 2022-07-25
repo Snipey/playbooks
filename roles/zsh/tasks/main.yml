@@ -29,9 +29,9 @@
   raw: 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
   when: not oh_my_zsh_stat.stat.exists
 
-- name: Links .zshrc file | file
-  file:
-    src: "{{ lookup('env', 'ROOTDIR') }}/roles/zsh/files/zshrc.link"
-    dest: "{{ lookup('env', 'HOME') }}/.zshrc"
-    state: link
-    force: yes
+# - name: Links .zshrc file | file
+#   file:
+#     src: "{{ lookup('env', 'ROOTDIR') }}/roles/zsh/files/zshrc.link"
+#     dest: "{{ lookup('env', 'HOME') }}/.zshrc"
+#     state: link
+#     force: yes
