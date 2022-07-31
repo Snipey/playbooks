@@ -2,3 +2,5 @@
   hosts: local
   roles:
     - {role: zsh, tags: ['zsh', 'bootstrap']}
+  collections:
+    - name: community.postgresql
